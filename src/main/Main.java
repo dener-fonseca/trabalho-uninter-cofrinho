@@ -32,7 +32,7 @@ public class Main {
       int opcao = scanner.nextInt();
 
       switch(opcao){
-        case 1 -> {
+        case 1: {
           System.out.println("Escolha a moeda:");
           System.out.println("1 - Real");
           System.out.println("2 - Dólar");
@@ -44,40 +44,55 @@ public class Main {
           double valor = scanner.nextDouble();
 
           Moeda moeda = switch(opcaoMoeda) {
-            case 1 -> new Real(valor);
-            case 2 -> new Dolar(valor);
-            case 3 -> new Euro(valor);
-            default -> null;
+            case 1: 
+              new Real(valor);
+              break;
+            
+            case 2: 
+              new Dolar(valor);
+              break;
+            
+            case 3:
+              new Euro(valor);
+              break;
+          
+            default:
+              null;
+              break;
           };
 
-          if(moeda != null {
+          if(moeda != null) {
             cofrinho.adicionar(moeda);  
             } else {
             System.out.println("Opção inválida");
             }
 
-          case 2 -> {
+          case 2:
             System.out.println("Digite o valor da moeda a ser removida:");
             
           double valorRemover = scanner.nextDouble();
 
           cofrinho.removerPorValor(valorRemover);
-          case 3 -> {
+          break;
+            
+          case 3:
             cofrinho.listagemMoedas();
-          }
+            break;
 
-          case 4 -> {
+          case 4:
             double totalConvertido = cofrinho.totalConvertido();
             System.out.println("Total convertido em reais: R$" + totalConvertido);
-          }
+            break;
 
-          case 5 -> {
+          case 5:
             System.out.println("Encerrando o programa...");
-          }
+            break;
 
-          default -> {
+          default:
             System.out.println("Opção inválida");
-          }
+            break;
+
+          
 
           
 
@@ -86,6 +101,7 @@ public class Main {
 
           
           }
+
 
 
           
@@ -94,7 +110,9 @@ public class Main {
           
         }
 
+
       }
+
 
 
       
@@ -107,6 +125,7 @@ public class Main {
 
       
     }
+}
 
 
 
