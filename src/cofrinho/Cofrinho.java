@@ -8,7 +8,7 @@ class Cofrinho {
   private ArrayList<Moeda> ListaMoedas;
 
   public Cofrinho() {
-    this.ListaMoedas = newArrayList<>();
+    this.ListaMoedas = new ArrayList<>();
   }
 
   public void adicionar(Moeda moeda) {
