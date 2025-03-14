@@ -1,6 +1,6 @@
 package src.moedas;
 
-abstract class Moeda {
+public abstract class Moeda {
   protected double valor;
 
   public Moeda(double valor) {

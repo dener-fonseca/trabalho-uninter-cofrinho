@@ -4,7 +4,7 @@ import src.moedas.Moeda;
 
 import java.util.ArrayList;
 
-class Cofrinho {
+public class Cofrinho {
   private ArrayList<Moeda> ListaMoedas;
 
   public Cofrinho() {
@@ -23,6 +23,16 @@ class Cofrinho {
        System.out.println("A moeda não foi encontrada.");
      }
    }
+
+  public boolean podeRemover(Moeda moeda) {
+    double saldoDisponivel = 0;
+    for(Moeda moedaCofrinho : this.ListaMoedas) {
+      if(moedaCofrinho.getClass().equals(moeda.getClass())) {
+        saldoDisponivel += moedaCofrinho.converter();
+      }
+    }
+    return saldoDisponivel >= moeda.converter(); 
+  }
 
   public void listagemMoedas() {
     if(this.ListaMoedas.isEmpty()){

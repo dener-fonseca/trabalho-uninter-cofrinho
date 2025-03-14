@@ -1,6 +1,6 @@
 package src.moedas;
 
-class Euro extends Moeda {
+public class Euro extends Moeda {
   public Euro(double valor) {
     super(valor);
   }
