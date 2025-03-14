@@ -1,15 +1,10 @@
 package src.main;
 
 import src.cofrinho.Cofrinho;
-
 import src.moedas.Moeda;
-
 import src.moedas.Real;
-
 import src.moedas.Dolar;
-
 import src.moedas.Euro;
-
 import java.util.Scanner;
 
 public class Main {
