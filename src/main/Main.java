@@ -14,7 +14,9 @@ public class Main {
 
     Cofrinho cofrinho = new Cofrinho();
 
-    while(true) {
+    int opcao = 0;
+    
+    while(opcao != 5) {
       System.out.println("\n=== Confrinho Digital ===");
 
       System.out.println("--- Menu de opções:");
@@ -29,94 +31,62 @@ public class Main {
 
       System.out.println("5 - Sair do programa");
 
-      System.out.println("Digite a opção desejada:");
+      System.out.println("--- Digite a opção desejada:");
 
-      int opcao;
-      try {
-        opcao = scanner.nextInt();
-      }
-
-      catch(Exception e) {
-        System.out.println("Entrada inválida. Por favor, digite um número.");
-        scanner.nextLine();
-        continue; 
-      }
+      opcao = scanner.nextInt();
 
       switch(opcao){
         case 1:
-          System.out.println("Escolha a moeda que você deseja adicionar:");
+          System.out.println("--- Escolha a moeda que você deseja adicionar:");
           System.out.println("1 - Real");
           System.out.println("2 - Dólar");
           System.out.println("3 - Euro");
+          System.out.println("--- Digite a opção desejada:");
 
           int tipoAdicionar = scanner.nextInt();
 
-          System.out.println("Digite o valor que você deseja adicionar:");
+          System.out.println("--- Digite o valor que você deseja adicionar:");
 
           double valorAdicionar = scanner.nextDouble();
 
           Moeda moedaAdicionar = null;
 
-          if(tipoAdicionar == 1) {
-            moedaAdicionar = new Real(valorAdicionar);
-          }
+          switch(tipoAdicionar) {
+            case 1:
+              moedaAdicionar = new Real(valorAdicionar);
+              break;
 
-          else if(tipoAdicionar == 2) {
-            moedaAdicionar = new Dolar(valorAdicionar);
-          }
+            case 2:
+              moedaAdicionar = new Dolar(valorAdicionar);
+              break;
 
-          else if(tipoAdicionar == 3) {
-            moedaAdicionar = new Euro(valorAdicionar);
-          }
-          else {
-            System.out.println("Opção inválida.");
-            break;
+            case 3:
+              moedaAdicionar = new Euro(valorAdicionar);
+              break;
+
+            default:
+        
+              System.out.println("Erro: Opção inválida.");
+            continue;
           }
           cofrinho.adicionar(moedaAdicionar);
-          System.out.println("Moeda adicionada com sucesso.");
-
           break;
 
         case 2:
-          System.out.println("Escolha a moeda que deseja remover:");
+          System.out.println("--- Escolha a moeda que deseja remover:");
           System.out.println("1 - Real");
           System.out.println("2 - Dólar");
           System.out.println("3 - Euro");
+          System.out.println("--- Digite a opção desejada:");
 
           int tipoRemover = scanner.nextInt();
 
-          System.out.println("Escolha o  valor que você deseja remover:");
+          System.out.println("--- Escolha o  valor que você deseja remover:");
 
           double valorRemover = scanner.nextDouble();
-
-          Moeda moedaRemover = null;
-
-          if(tipoRemover == 1) {
-            moedaRemover = new Real(valorRemover);
-          }
-
-          else if(tipoRemover == 2) {
-            moedaRemover = new Dolar(valorRemover);
-          }
-
-          else if(tipoRemover == 3) {
-            moedaRemover = new Euro(valorRemover);
-          }
-            
-          else {
-            System.out.println("Opção inválida.");
-            break;
-          }
-
-          if(cofrinho.podeRemover(moedaRemover)) { 
-    cofrinho.remover(moedaRemover);
-    System.out.println("Moeda removida com sucesso!");
-} 
-          else {
-    System.out.println("Erro: saldo insuficiente no cofrinho.");
-          }
-
-          break;
+  
+          cofrinho.remover(valorRemover);
+        break;
 
         case 3:
             cofrinho.listagemMoedas();
@@ -132,7 +102,7 @@ public class Main {
             return;
 
           default:
-            System.out.println("Opção inválida");
+            System.out.println("Erro: Opção inválida");
             break;
 
       }

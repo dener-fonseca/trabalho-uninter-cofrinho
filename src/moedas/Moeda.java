@@ -7,6 +7,10 @@ public abstract class Moeda {
     this.valor = valor;
   }
 
+  public double getValor() {
+    return this.valor;
+  }
+
   public abstract void info();
   public abstract double converter();
 }

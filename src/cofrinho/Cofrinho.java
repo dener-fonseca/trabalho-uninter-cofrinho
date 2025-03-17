@@ -3,9 +3,10 @@ package src.cofrinho;
 import src.moedas.Moeda;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cofrinho {
-  private ArrayList<Moeda> ListaMoedas;
+  private List<Moeda> ListaMoedas;
 
   public Cofrinho() {
     this.ListaMoedas = new ArrayList<>();
@@ -13,25 +14,18 @@ public class Cofrinho {
 
   public void adicionar(Moeda moeda) {
     this.ListaMoedas.add(moeda);
-    System.out.println(" A moeda adicionada com sucesso."); 
+    System.out.println("Moeda adicionada com sucesso."); 
   }
 
-   public void remover(Moeda moeda) {
-    if(this.ListaMoedas.remove(moeda)) {
-       System.out.println("A moeda removida com sucesso.");
-     } else {
-       System.out.println("A moeda não foi encontrada.");
-     }
-   }
+   public void remover(double valor) {
 
-  public boolean podeRemover(Moeda moeda) {
-    double saldoDisponivel = 0;
-    for(Moeda moedaCofrinho : this.ListaMoedas) {
-      if(moedaCofrinho.getClass().equals(moeda.getClass())) {
-        saldoDisponivel += moedaCofrinho.converter();
-      }
-    }
-    return saldoDisponivel >= moeda.converter(); 
+     for (Moeda moeda : this.ListaMoedas) {
+       if(moeda.getValor() == valor) {
+         ListaMoedas.remove(moeda);
+         System.out.println("Moeda removida com sucesso.");
+       } else {
+       System.out.println("A moeda não foi encontrada.");
+         }
   }
 
   public void listagemMoedas() {

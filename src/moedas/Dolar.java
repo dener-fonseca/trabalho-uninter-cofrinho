@@ -8,7 +8,7 @@ public class Dolar extends Moeda {
   @Override
   public void info() {
     System.out.println("Moeda: Dolar");
-    System.out.println("Valor: " + this.valor);
+    System.out.println("Valor: " + this.valor + " dólares");
   }
 
   @Override
