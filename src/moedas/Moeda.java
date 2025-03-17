@@ -10,6 +10,10 @@ public abstract class Moeda {
   public double getValor() {
     return this.valor;
   }
+
+  public void setValor(double valor) {
+    this.valor = valor;
+  }
  
   public abstract int getTipo();
   public abstract void info();

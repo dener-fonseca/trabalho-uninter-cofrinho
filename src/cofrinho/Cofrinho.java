@@ -5,6 +5,10 @@ import src.moedas.Moeda;
 import java.util.ArrayList;
 import java.util.List;
 
+import src.moedas.Real;
+import src.moedas.Dolar;
+import src.moedas.Euro;
+
 public class Cofrinho {
   private List<Moeda> ListaMoedas;
 
