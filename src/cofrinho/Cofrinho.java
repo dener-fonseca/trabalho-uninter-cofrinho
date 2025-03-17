@@ -19,7 +19,7 @@ public class Cofrinho {
 
    public void remover(int tipo, double valor) {
      for (Moeda moeda : this.ListaMoedas) {
-       if ((tipo == 1 && moeda instanceof Real)) || (tipo == 2 && moeda instanceof Dolar)) || (tipo == 3 && moeda instanceof Euro)) {
+       if ((tipo == 1 && moeda instanceof Real) || (tipo == 2 && moeda instanceof Dolar) || (tipo == 3 && moeda instanceof Euro)) {
          if (moeda.getValor() >= valor) {
            moeda.setValor(moeda.getValor() - valor);
            System.out.println(valor + "removido com sucesso.");
