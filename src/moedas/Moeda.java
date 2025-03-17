@@ -10,7 +10,8 @@ public abstract class Moeda {
   public double getValor() {
     return this.valor;
   }
-
+ 
+  public abstract int getTipo();
   public abstract void info();
   public abstract double converter();
 }

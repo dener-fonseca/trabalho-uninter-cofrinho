@@ -6,6 +6,11 @@ public class Euro extends Moeda {
   }
 
   @Override
+  public int getTipo() {
+    return 3;
+  }
+
+  @Override
   public void info() {
     System.out.println("Moeda: Euro");
     System.out.println("Valor: " + this.valor + " euros");

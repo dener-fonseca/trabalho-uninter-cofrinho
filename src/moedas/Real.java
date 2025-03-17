@@ -6,6 +6,11 @@ public class Real extends Moeda {
   }
 
   @Override
+  public int getTipo() {
+    return 1;
+  }
+
+  @Override
   public void info() {
     System.out.println("Moeda: Real");
     System.out.println("Valor: " + this.valor + " reais");

@@ -85,7 +85,7 @@ public class Main {
 
           double valorRemover = scanner.nextDouble();
   
-          cofrinho.remover(valorRemover);
+          cofrinho.remover(tipoRemover, valorRemover);
         break;
 
         case 3:
