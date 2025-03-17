@@ -25,8 +25,10 @@ public class Cofrinho {
          System.out.println("Moeda removida com sucesso.");
        } else {
        System.out.println("A moeda não foi encontrada.");
-         }
-  }
+         
+       }
+     }
+   
 
   public void listagemMoedas() {
     if(this.ListaMoedas.isEmpty()){
