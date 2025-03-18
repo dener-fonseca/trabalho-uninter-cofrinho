@@ -4,6 +4,7 @@ import src.moedas.Moeda;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Iterator;
 
 import src.moedas.Real;
 import src.moedas.Dolar;
