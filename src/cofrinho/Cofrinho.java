@@ -18,12 +18,18 @@ public class Cofrinho {
   }
 
   public void adicionar(Moeda moeda) {
+    for(Moeda moedaCofrinho : this.ListaMoedas){
+      if((novaMoeda instanceof Real && moedaCofrinho instanceof Real) || (novaMoeda instanceof Dolar && moedaCofrinho instanceof Dolar) || (novaMoeda instanceof Euro && moedaCofrinho instanceof Euro)) {
+        moeda.setValor(moeda.getValor() + novaMoeda.getValor());
+        return;
+      }
+    }
     this.ListaMoedas.add(moeda);
     System.out.println("Moeda adicionada com sucesso."); 
   }
 
    public void remover(int tipo, double valor) {
-     Iterator<Moeda> iterator = this.ListaMoedas.Iterator();
+     Iterator<Moeda> iterator = this.ListaMoedas.iterator();
 
      while(iterator.hasNext()) {
        Moeda moeda = iterator.next();
