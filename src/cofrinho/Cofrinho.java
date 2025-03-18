@@ -22,7 +22,7 @@ public class Cofrinho {
   }
 
    public void remover(int tipo, double valor) {
-     iterator<Moeda> iterator = this.ListaMoedas.iterator();
+     Iterator<Moeda> iterator = this.ListaMoedas.Iterator();
 
      while(iterator.hasNext()) {
        Moeda moeda = iterator.next();
@@ -31,14 +31,14 @@ public class Cofrinho {
             (tipo == 2 && moeda instanceof Dolar) ||
             (tipo == 3 && moeda instanceof Euro)) {
          if (moeda.getValor() == valor) {
-           moeda.setValor(moedas.getValor() - valor);
+           moeda.setValor(moeda.getValor() - valor);
            System.out.println("Valor removido com sucesso.");
            if (moeda.getValor() == 0) {
              iterator.remove();
            }
            return;
             } else {
-           Sysmte.out.println("Saldo insuficiente para remover.");
+           System.out.println("Saldo insuficiente para remover.");
            return;
             }
           }
