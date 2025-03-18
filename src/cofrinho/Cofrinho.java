@@ -19,8 +19,8 @@ public class Cofrinho {
 
   public void adicionar(Moeda moeda) {
     for(Moeda moedaCofrinho : this.ListaMoedas){
-      if((novaMoeda instanceof Real && moedaCofrinho instanceof Real) || (novaMoeda instanceof Dolar && moedaCofrinho instanceof Dolar) || (novaMoeda instanceof Euro && moedaCofrinho instanceof Euro)) {
-        moeda.setValor(moeda.getValor() + novaMoeda.getValor());
+      if((moeda instanceof Real && moedaCofrinho instanceof Real) || (moeda instanceof Dolar && moedaCofrinho instanceof Dolar) || (moeda instanceof Euro && moedaCofrinho instanceof Euro)) {
+        moedaCofrinho.setValor(moedaCofrinho.getValor() + moeda.getValor());
         return;
       }
     }
@@ -37,7 +37,7 @@ public class Cofrinho {
        if ((tipo == 1 && moeda instanceof Real) ||
             (tipo == 2 && moeda instanceof Dolar) ||
             (tipo == 3 && moeda instanceof Euro)) {
-         if (moeda.getValor() == valor) {
+         if (moeda.getValor() >= valor) {
            moeda.setValor(moeda.getValor() - valor);
            System.out.println("Valor removido com sucesso.");
            if (moeda.getValor() == 0) {

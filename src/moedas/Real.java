@@ -1,20 +1,23 @@
+//Definição da classe Real no pacote src.moedas
 package src.moedas;
 
+//Criação da classe Real que herda da classe Moeda
 public class Real extends Moeda {
+  //Construtor da classe Real que recebe um valor double e passa o valor para a superclasse Moeda
   public Real(double valor) {
     super(valor);
   }
 
+  //Método que retorna o tipo da moeda que neste caso é 1
   public int getTipo() {
     return 1;
   }
 
+  //Método que imprime as informações da moeda Real e o seu valor total
   public void info() {
-    System.out.println("Moeda: Real");
-    System.out.println("Valor: " + this.valor + " Reais");
+    System.out.println("Moeda Real: Valor total: R$ " + this.valor);
   }
-
-  public double converter() {
-    return this.valor;
+  //Método que c
+  
   } 
 }
