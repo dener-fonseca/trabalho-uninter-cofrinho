@@ -81,7 +81,7 @@ public class Main {
 
           int tipoRemover = scanner.nextInt();
 
-          System.out.println("--- Escolha o  valor que você deseja remover:");
+          System.out.println("--- Escolha o valor que você deseja remover:");
 
           double valorRemover = scanner.nextDouble();
   

@@ -5,18 +5,15 @@ public class Dolar extends Moeda {
     super(valor);
   }
   
-  @Override
   public int getTipo() {
     return 2;
   }
 
-  @Override
   public void info() {
     System.out.println("Moeda: Dolar");
-    System.out.println("Valor: " + this.valor + " dólares");
+    System.out.println("Valor: " + this.valor + " Dólares");
   }
 
-  @Override
   public double converter() {
     return this.valor * 5.00;
   } 

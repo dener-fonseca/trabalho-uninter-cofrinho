@@ -5,18 +5,15 @@ public class Real extends Moeda {
     super(valor);
   }
 
-  @Override
   public int getTipo() {
     return 1;
   }
 
-  @Override
   public void info() {
     System.out.println("Moeda: Real");
-    System.out.println("Valor: " + this.valor + " reais");
+    System.out.println("Valor: " + this.valor + " Reais");
   }
 
-  @Override
   public double converter() {
     return this.valor;
   } 
