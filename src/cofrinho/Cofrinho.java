@@ -1,12 +1,14 @@
 //Definição de que a classe Cofrinho pertence ao pacote src.cofrinho
 package src.cofrinho;
 
-//Importação das classe Moeda, Real, Euro e Dolar do pacote src.moedas
+//Importação das classe Moeda, Real, Dolar, Euro, Libra, Yene e Yuan do pacote src.moedas
 import src.moedas.Moeda;
 import src.moedas.Real;
 import src.moedas.Dolar;
 import src.moedas.Euro;
-
+import src.moedas.Libra;
+import src.moedas.Yene;
+import src.moedas.Yuan;
 
 //Importação das classes Arraylist, List e Iterator da biblioteca padrão java.util
 import java.util.ArrayList;
@@ -36,7 +38,7 @@ public class Cofrinho {
         // Condicional if para verificar se a moeda já existe no cofrinho e para adicionar o valor espeficado
         if (moedaCofrinho.getClass().equals(moeda.getClass())) {
             moedaCofrinho.setValor(moedaCofrinho.getValor() + moeda.getValor());
-            System.out.println("Valor acumulado com sucesso.");
+            System.out.println("Valor adicionado com sucesso.");
             return;
         }
     }
@@ -56,8 +58,8 @@ public class Cofrinho {
     }
 
     // Condicional if para verificar se o tipo de moeda é válido
-    if (tipo != 1 && tipo != 2 && tipo != 3) {
-        System.out.println("Erro: Tipo de moeda inválido. Use 1 para Real, 2 para Dólar, ou 3 para Euro.");
+    if (tipo != 1 && tipo != 2 && tipo != 3 && tipo != 4 && tipo != 5 && tipo != 6) {
+        System.out.println("Erro: Tipo de moeda inválido. Use 1 para Real, 2 para Dólar, 3 para Euro, 4 para Libra, 5 para Yene ou 6 para Yuan.");
         return;
     }
 
@@ -72,7 +74,10 @@ public class Cofrinho {
         // Condicional if para verificar se a moeda corresponde ao tipo solicitado
         if ((tipo == 1 && moeda instanceof Real) ||
             (tipo == 2 && moeda instanceof Dolar) ||
-            (tipo == 3 && moeda instanceof Euro)) {
+            (tipo == 3 && moeda instanceof Euro) ||
+            (tipo == 4 && moeda instanceof Libra) ||
+            (tipo == 5 && moeda instanceof Yene) ||
+            (tipo == 6 && moeda instanceof Yuan)) {
 
             moedaEncontrada = true;
 

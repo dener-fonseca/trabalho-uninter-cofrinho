@@ -1,15 +1,16 @@
 //Definição de que a classe Main pertence ao pacote src.main
 package src.main;
 
-//Importação das classes Cofrinho, Moeda, Real, Euro e Dolar dos pacotes src.cofrinho e src.moedas
+//Importação das classes Cofrinho, Moeda, Real, Euro, Dolar, Libra, Yene e Yuan dos pacotes src.cofrinho e src.moedas
 import src.cofrinho.Cofrinho;
 import src.moedas.Moeda;
 import src.moedas.Real;
 import src.moedas.Dolar;
 import src.moedas.Euro;
 
-//Importação da classe Scanner da biblioteca padrão java.util
+//Importação da classes Scanner e InputMismatchException da biblioteca padrão java.util
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 //Criação da classe Main para as operações do programa
 public class Main {
@@ -58,6 +59,9 @@ public class Main {
           System.out.println("1 - Real");
           System.out.println("2 - Dólar");
           System.out.println("3 - Euro");
+          System.out.println("4 - Libra");
+          System.out.println("5 - Yene");
+          System.out.println("6 - Yuan");
           System.out.println("--- Digite a opção desejada:");
 
           int tipoAdicionar = 0;
@@ -65,13 +69,13 @@ public class Main {
           while(true) {
             try {
               tipoAdicionar = scanner.nextInt();
-              if (tipoAdicionar < 1 || tipoAdicionar > 3) {
-                System.out.println("Opção inválida. Por favor, digite um número entre 1 e 3.");
+              if (tipoAdicionar < 1 || tipoAdicionar > 6) {
+                System.out.println("Opção inválida. Por favor, digite um número entre 1 e 6.");
               } else {
                 break;
               }
             } catch (InputMismatchException e) {
-              System.out.println("Opção inválida. Por favor, digite um número entre 1 e 3.");
+              System.out.println("Opção inválida. Por favor, digite um número entre 1 e 6.");
               scanner.nextLine();
             }
           }
@@ -89,7 +93,7 @@ public class Main {
               break;
               }
             } catch (InputMismatchException e) {
-              System.out.println("Valor inválido. Por favor, digite um numerico.");
+              System.out.println("Valor inválido. Por favor, digite um valor numerico.");
               scanner.nextLine();
             }
           }
@@ -108,6 +112,18 @@ public class Main {
             case 3:
               moedaAdicionar = new Euro(valorAdicionar);
               break;
+
+            case 4:
+              moedaAdicionar = new Libra(valorAdicionar);
+              break;
+
+            case 5:
+              moedaAdicionar = new Yene(valorAdicionar);
+              break;
+
+            case 6:
+              moedaAdicionar = new Yuan(valorAdicionar);
+              break;
           }
           cofrinho.adicionar(moedaAdicionar);
           break;
@@ -117,6 +133,9 @@ public class Main {
           System.out.println("1 - Real");
           System.out.println("2 - Dólar");
           System.out.println("3 - Euro");
+          System.out.println("4 - Libra");
+          System.out.println("5 - Yene");
+          System.out.println("6 - Yuan");
           System.out.println("--- Digite a opção desejada:");
 
           int tipoRemover = 0;
@@ -124,13 +143,13 @@ public class Main {
           while(true) {
           try {
             tipoRemover = scanner.nextInt();
-            if (tipoRemover < 1 || tipoRemover > 3) {
-              System.out.println("Opção inválida. Por favor, digite um número entre 1 e 3.");
+            if (tipoRemover < 1 || tipoRemover > 6) {
+              System.out.println("Opção inválida. Por favor, digite um número entre 1 e 6.");
             } else {
               break;
             }
           } catch (InputMismatchException e) {
-            System.out.println("Opção inválida. Por favor, digite um número entre 1 e 3.");
+            System.out.println("Opção inválida. Por favor, digite um número entre 1 e 6.");
             scanner.nextLine();
           }
         }
