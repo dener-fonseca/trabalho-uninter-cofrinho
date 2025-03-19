@@ -1,4 +1,4 @@
-//Definição da classe Real no pacote src.moedas
+//Definição de que a classe Real pertence ao pacote src.moedas
 package src.moedas;
 
 //Criação da classe Real que herda da classe Moeda
@@ -13,11 +13,8 @@ public class Real extends Moeda {
     return 1;
   }
 
-  //Método que imprime as informações da moeda Real e o seu valor total
+  //Método que imprime as informações da moeda Real e o seu valor total acumulado
   public void info() {
-    System.out.println("Moeda Real: Valor total: R$ " + this.valor);
+    System.out.printf("Moeda Real: Valor total acumulado: R$ %.2f%n", this.valor);
   }
-  //Método que c
-  
-  } 
 }

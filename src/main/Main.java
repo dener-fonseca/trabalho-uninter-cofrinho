@@ -1,12 +1,17 @@
+//Definição de que a classe Main pertence ao pacote src.main
 package src.main;
 
+//Importação das classes Cofrinho, Moeda, Real, Euro e Dolar dos pacotes src.cofrinho e src.moedas
 import src.cofrinho.Cofrinho;
 import src.moedas.Moeda;
 import src.moedas.Real;
 import src.moedas.Dolar;
 import src.moedas.Euro;
+
+//Importação da classe Scanner da biblioteca padrão java.util
 import java.util.Scanner;
 
+//Criação da classe Main para as operações do programa
 public class Main {
   public static void main(String[] args) {
 
@@ -94,7 +99,7 @@ public class Main {
 
         case 4:
             double totalConvertido = cofrinho.totalConvertido();
-            System.out.println("Total convertido em reais: R$" + totalConvertido);
+            System.out.printf("Total convertido em reais: R$ %.2f%n", totalConvertido);
             break;
 
           case 5:
