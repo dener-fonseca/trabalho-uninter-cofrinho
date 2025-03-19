@@ -37,8 +37,20 @@ public class Main {
       System.out.println("5 - Sair do programa");
 
       System.out.println("--- Digite a opção desejada:");
-
-      opcao = scanner.nextInt();
+      
+      while(true) {
+        try {
+          opcao = scanner.nextInt();
+          if (opcao < 1 || opcao > 5){
+            System.out.println("Opção inválida. Por favor, digite um número entre 1 e 5.");
+          } else {
+            break;
+          }
+        }  catch (InputMismatchException e) {
+          System.out.println("Opção inválida. Por favor, digite um número entre 1 e 5.");
+          scanner.nextLine();
+        }
+      }
 
       switch(opcao){
         case 1:
@@ -48,12 +60,40 @@ public class Main {
           System.out.println("3 - Euro");
           System.out.println("--- Digite a opção desejada:");
 
-          int tipoAdicionar = scanner.nextInt();
+          int tipoAdicionar = 0;
 
+          while(true) {
+            try {
+              tipoAdicionar = scanner.nextInt();
+              if (tipoAdicionar < 1 || tipoAdicionar > 3) {
+                System.out.println("Opção inválida. Por favor, digite um número entre 1 e 3.");
+              } else {
+                break;
+              }
+            } catch (InputMismatchException e) {
+              System.out.println("Opção inválida. Por favor, digite um número entre 1 e 3.");
+              scanner.nextLine();
+            }
+          }
+          
           System.out.println("--- Digite o valor que você deseja adicionar:");
 
-          double valorAdicionar = scanner.nextDouble();
-
+          double valorAdicionar = 0;
+          
+          while(true) {
+            try {
+              valorAdicionar = scanner.nextDouble();
+              if (valorAdicionar <= 0) {
+                System.out.println("Valor inválido. Por favor, digite um valor maior que zero.");
+              } else {
+              break;
+              }
+            } catch (InputMismatchException e) {
+              System.out.println("Valor inválido. Por favor, digite um numerico.");
+              scanner.nextLine();
+            }
+          }
+          
           Moeda moedaAdicionar = null;
 
           switch(tipoAdicionar) {
@@ -68,11 +108,6 @@ public class Main {
             case 3:
               moedaAdicionar = new Euro(valorAdicionar);
               break;
-
-            default:
-        
-              System.out.println("Erro: Opção inválida.");
-            continue;
           }
           cofrinho.adicionar(moedaAdicionar);
           break;
@@ -84,11 +119,39 @@ public class Main {
           System.out.println("3 - Euro");
           System.out.println("--- Digite a opção desejada:");
 
-          int tipoRemover = scanner.nextInt();
+          int tipoRemover = 0;
 
+          while(true) {
+          try {
+            tipoRemover = scanner.nextInt();
+            if (tipoRemover < 1 || tipoRemover > 3) {
+              System.out.println("Opção inválida. Por favor, digite um número entre 1 e 3.");
+            } else {
+              break;
+            }
+          } catch (InputMismatchException e) {
+            System.out.println("Opção inválida. Por favor, digite um número entre 1 e 3.");
+            scanner.nextLine();
+          }
+        }
+          
           System.out.println("--- Escolha o valor que você deseja remover:");
 
-          double valorRemover = scanner.nextDouble();
+          double valorRemover = 0;
+
+          while(true) {
+            try {
+              valorRemover = scanner.nextDouble();
+              if (valorRemover <= 0) {
+                System.out.println("Valor inválido. Por favor, digite um valor maior que zero.");
+              } else {
+              break;
+              }
+            } catch (InputMismatchException e) {
+              System.out.println("Valor inválido. Por favor, digite um valor numerico.");
+              scanner.nextLine();
+            }
+          }
   
           cofrinho.remover(tipoRemover, valorRemover);
         break;
@@ -105,11 +168,6 @@ public class Main {
           case 5:
             System.out.println("Encerrando o programa...");
             return;
-
-          default:
-            System.out.println("Erro: Opção inválida");
-            break;
-
       }
     }
   }    

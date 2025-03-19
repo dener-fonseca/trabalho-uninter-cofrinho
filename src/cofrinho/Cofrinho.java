@@ -33,7 +33,7 @@ public class Cofrinho {
 
     // Estrutura de repetição for para percorrer a lista de moedas
     for (Moeda moedaCofrinho : this.ListaMoedas) {
-        // Condicional if para verificar se a moeda já existe no cofrinho para adicionar o valor espeficado
+        // Condicional if para verificar se a moeda já existe no cofrinho e para adicionar o valor espeficado
         if (moedaCofrinho.getClass().equals(moeda.getClass())) {
             moedaCofrinho.setValor(moedaCofrinho.getValor() + moeda.getValor());
             System.out.println("Valor acumulado com sucesso.");
@@ -41,59 +41,63 @@ public class Cofrinho {
         }
     }
 
-    // Caso a moeda seja do tipo que não existe no cofrinho, adiciona-a
-    else {
-        this.ListaMoedas.add(moeda);
+    // Bloco de código para adicionar moeda ao cofrinho caso a moeda não exista
+    this.ListaMoedas.add(moeda);
     System.out.println("Moeda adicionada com sucesso.");
-    }
+        
 }
 
   // Método para remover um valor com uma moeda do cofrinho
   public void remover(int tipo, double valor) {
-    // Verificação se o valor a ser retirado é positivo
+    // Condicional if para verificar se o valor a ser retirado é maior que zero
     if (valor <= 0) {
         System.out.println("Erro: O valor a ser retirado deve ser positivo.");
         return;
     }
 
-    // Verificação se o tipo de moeda é válido
+    // Condicional if para verificar se o tipo de moeda é válido
     if (tipo != 1 && tipo != 2 && tipo != 3) {
         System.out.println("Erro: Tipo de moeda inválido. Use 1 para Real, 2 para Dólar, ou 3 para Euro.");
         return;
     }
 
+    // Criação de iterador para percorrer a lista de moedas
     Iterator<Moeda> iterator = this.ListaMoedas.iterator();
     boolean moedaEncontrada = false;
 
+    // Estrutura de repetição while para percorrer a lista de moedas
     while (iterator.hasNext()) {
         Moeda moeda = iterator.next();
 
-        // Verificação se a moeda corresponde ao tipo solicitado
+        // Condicional if para verificar se a moeda corresponde ao tipo solicitado
         if ((tipo == 1 && moeda instanceof Real) ||
             (tipo == 2 && moeda instanceof Dolar) ||
             (tipo == 3 && moeda instanceof Euro)) {
 
             moedaEncontrada = true;
 
-            // Verificação se o valor da moeda é suficiente para a retirada
+            // Condicional if para verificar se o valor da moeda é suficiente para a retirada
             if (moeda.getValor() >= valor) {
                 moeda.setValor(moeda.getValor() - valor);
                 System.out.println("Valor removido com sucesso.");
 
-                // Se o valor da moeda for 0 após a remoção, a moeda é removida
+                // Condicional if que verifica se o valor da moeda é zero e o remove da lista caso for verdadeiro
                 if (moeda.getValor() == 0) {
                     iterator.remove();
                     System.out.println("A moeda foi removida do cofrinho.");
                 }
-                return; // Conclui a operação
-            } else {
+                return;
+            } 
+
+            // Condicional else que retorna mensagem de erro caso o valor da moeda seja insuficiente
+            else {
                 System.out.println("Erro: O saldo da moeda é insuficiente para a remoção.");
                 return;
             }
         }
     }
 
-    // Caso nenhuma moeda do tipo especificado seja encontrada
+    // Condicional if que verifica se a moeda foi encontrada no cofrinho
     if (!moedaEncontrada) {
         System.out.println("Erro: A Moeda do tipo especificado não foi encontrada.");
     }
