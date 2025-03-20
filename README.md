@@ -1,166 +1,169 @@
+Cofrinho Digital - Uninter
 
-Navigation Menu
-
-Code
-Issues
-Pull requests
-replit.com/@Dener-Fonseca/dio-trilha-java-basico4
- 0 stars
- 0 forks
- 1 watching
- 1 Branch
- 0 Tags
- Activity
-Public repository
-Dener-Fonseca/dio-trilha-java-basico4
-Name	
-Dener-Fonseca
-Dener-Fonseca
-18 hours ago
-.settings
-2 weeks ago
-src
-18 hours ago
-target/dependency
-2 weeks ago
-.classpath
-2 weeks ago
-.gitignore
-2 weeks ago
-.project
-2 weeks ago
-.replit
-2 weeks ago
-README.md
-18 hours ago
-pom.xml
-2 weeks ago
-replit.nix
-2 weeks ago
-Repository files navigation
-README
-Banco Projeto - DIO
-
-Este é um projeto de um sistema bancário simples, desenvolvido para a prática de conceitos de programação orientada a objetos e outras habilidades em Java. O objetivo deste projeto foi melhorar um código previamente proposto pelo professor da escola Dio, aplicando técnicas de modelagem de classes, manipulação de listas, abstração e implementação de interfaces.
+Este é um projeto acadêmico desenvolvido para a disciplina de Programação Orientada a Objetos na Universidade Uninter. O projeto consiste em um cofrinho digital, que permite ao usuário realizar operações relacionadas à adição, remoção e consulta de moedas, além de converter o total armazenado para reais.
 
 🛠 Tecnologias e Conceitos Utilizados
 
-Java: Linguagem principal do projeto.
+O projeto foi desenvolvido em Java e aplica os seguintes conceitos da programação orientada a objetos (POO):
 
-Classes e Objetos: Utilização de classes para representar o banco, clientes, contas e suas operações.
+Classes e Objetos: Representação de diferentes tipos de moedas e do cofrinho digital.
 
-Interface: Definição de comportamentos comuns através da interface InterfaceConta.
+Herança: Moedas específicas (Real, Dólar, Euro, Libra, Iene, Yuan) herdando características da classe base Moeda.
 
-Herança: Utilização de herança para criar diferentes tipos de contas, como ContaCorrente e ContaPoupanca.
+Polimorfismo: Implementação de métodos que se comportam de forma diferente dependendo da moeda selecionada.
 
-Listas: Manipulação de listas para armazenar e gerenciar os clientes do banco.
+Encapsulamento: Uso de atributos privados e métodos públicos para controle das informações.
+
+Pacotes: Organização do código em pacotes Main, Cofrinho e Moedas.
+
+Listas (ArrayList): Utilizadas para armazenar as moedas adicionadas ao cofrinho.
+
+Scanner (java.util.Scanner): Para capturar entradas do usuário.
+
+Estruturas de Repetição e Condicionais: Para controle do menu e das operações do cofrinho.
+
+Conversão de Moedas: Implementação de métodos para converter os valores das moedas para reais.
+
+Manipulação de Objetos: Adição e remoção dinâmica de moedas dentro do cofrinho.
+
+
+
+---
 
 📋 Descrição
 
-O projeto consiste em um sistema bancário simples com funcionalidades como:
+O Cofrinho Digital permite que o usuário gerencie moedas de diferentes tipos e valores, realizando as seguintes operações:
 
-Cadastro de Clientes: Onde você pode adicionar clientes ao banco.
+✅ Adicionar Moedas: O usuário pode escolher entre diferentes tipos de moedas e especificar o valor a ser adicionado.
+✅ Remover Moedas: O usuário pode selecionar uma moeda específica e remover um valor dela. Se o valor chegar a zero, a moeda é excluída do cofrinho.
+✅ Listar Moedas: Exibe todas as moedas armazenadas no cofrinho, junto com seus valores acumulados.
+✅ Exibir Total Convertido: Mostra o valor total do cofrinho convertido para reais.
+✅ Menu Interativo: O sistema possui um menu principal e submenus para facilitar a interação do usuário.
+✅ Encerramento do Programa: Opção para sair do programa.
 
-Contas Bancárias: Clientes podem ter contas do tipo Conta Corrente ou Conta Poupança.
 
-Operações Bancárias: É possível realizar operações como saques, depósitos e transferências entre contas.
-
-Impressão de Informações: O sistema imprime as informações dos clientes e contas ao final de cada operação.
+---
 
 📂 Estrutura do Projeto
 
-A estrutura do projeto está organizada da seguinte forma:
+O projeto segue a seguinte organização de pacotes e classes:
 
-dio-trilha-java-basico4/ │── src/ │ ├── banco/ │ │ ├── Banco.java │ ├── cliente/ │ │ ├── Cliente.java │ ├── conta/ │ │ ├── Conta.java │ │ ├── ContaCorrente.java │ │ ├── ContaPoupanca.java │ │ ├── InterfaceConta.java │ ├── Main.java
+cofrinho-digital/
+│── src/
+│   ├── main/
+│   │   ├── Main.java
+│   ├── cofrinho/
+│   │   ├── Cofrinho.java
+│   ├── moedas/
+│   │   ├── Moeda.java
+│   │   ├── Real.java
+│   │   ├── Dolar.java
+│   │   ├── Euro.java
+│   │   ├── Libra.java
+│   │   ├── Iene.java
+│   │   ├── Yuan.java
 
-banco/Banco.java: Classe que representa o banco e contém a lista de clientes.
+📌 Descrição das Classes
 
-cliente/Cliente.java: Classe que contém as informações do cliente, como nome e CPF.
+Main.java: Classe principal que executa o programa e gerencia o menu interativo.
 
-conta/Conta.java: Classe abstrata que serve como base para as contas.
+Cofrinho.java: Gerencia a lista de moedas e implementa operações como adicionar, remover e exibir o total convertido.
 
-conta/ContaCorrente.java: Classe que representa a conta corrente e herda da classe Conta.
+Moeda.java: Classe abstrata que define a estrutura base para todas as moedas.
 
-conta/ContaPoupanca.java: Classe que representa a conta poupança e herda da classe Conta.
+Real.java, Dolar.java, Euro.java, Libra.java, Iene.java, Yuan.java: Classes que representam diferentes tipos de moedas e implementam os métodos de conversão.
 
-conta/InterfaceConta.java: Interface que define os métodos essenciais das contas, como sacar, depositar e transferir.
 
-Main.java: Classe principal que executa o código, cria os objetos e realiza as operações.
+
+---
 
 🏃‍♂️ Como Rodar o Projeto
 
 Pré-requisitos
 
-Certifique-se de ter o Java instalado em sua máquina. Você pode verificar isso digitando o seguinte comando no terminal:
+Ter o Java JDK instalado na máquina.
 
-java -version
+Ter um ambiente de desenvolvimento configurado (IDE como IntelliJ, Eclipse, ou VS Code) ou executar via terminal.
 
-Se o Java não estiver instalado, você pode baixar e instalar o JDK.
 
-Passos para rodar o projeto
+Passos para execução
 
-Clone o repositório ou baixe os arquivos do projeto:
-Se você estiver usando o Git:
+1. Clone o repositório ou baixe os arquivos do projeto:
 
-git clone https://github.com/Dener-Fonseca/dio-trilha-java-basico4.git
 
-Navegue até o diretório do projeto:
-cd BancoProjeto
 
-Compile o projeto: Se estiver usando o terminal, compile o código com o seguinte comando:
+git clone https://github.com/SEU_USUARIO/cofrinho-digital.git
+
+2. Acesse o diretório do projeto:
+
+
+
+cd cofrinho-digital
+
+3. Compile o código:
+
+
+
 javac src/main/java/Main.java
 
-Execute o código: Para rodar o programa, use o seguinte comando:
+4. Execute o programa:
+
+
+
 java src.main.java.Main
 
-Isso iniciará a execução do código e você verá a saída no console com as operações realizadas.
+5. O menu interativo será exibido no console para que o usuário possa interagir com o cofrinho.
 
-📌 Objetivo do Projeto
 
-Este projeto foi desenvolvido com o objetivo de:
 
-Praticar conceitos de orientação a objetos, como classes, objetos, herança, interfaces e abstração.
 
-Melhorar um código existente proposto pelo professor da Dio, adicionando novas funcionalidades e refatorando a estrutura de classes.
+---
 
-Aprender a trabalhar com listas e manipular dados de maneira eficiente.
+🎯 Objetivo do Projeto
+
+Este projeto foi desenvolvido para:
+
+Praticar os conceitos de Programação Orientada a Objetos (POO).
+
+Implementar herança, encapsulamento e polimorfismo na criação de classes.
+
+Trabalhar com listas e manipulação dinâmica de objetos.
+
+Criar um menu interativo e intuitivo para o usuário.
+
+Aplicar conversão de moedas para fins de aprendizado.
+
+
+
+---
 
 ✍️ Contribuindo
 
-Se você deseja contribuir com melhorias ou novos recursos para o projeto, siga estas etapas:
+Se deseja contribuir com melhorias para o projeto:
 
-Faça o fork do repositório.
+1. Faça um fork do repositório.
 
-Crie uma nova branch para a sua modificação:
 
-git checkout -b minha-nova-funcionalidade
+2. Crie uma nova branch para suas alterações:
 
-Faça as alterações e envie um pull request.
+git checkout -b minha-melhoria
+
+
+3. Faça as modificações e realize um commit:
+
+git commit -m "Adicionando nova funcionalidade"
+
+
+4. Envie um pull request para revisão.
+
+
+
+
+---
+
 📞 Contato
 
-Este projeto foi desenvolvido por Dener Xisto da Fonseca como parte dos estudos na escola Dio. Para dúvidas ou sugestões, entre em contato:
+Este projeto foi desenvolvido como parte do curso da Universidade Uninter. Para dúvidas ou sugestões, entre em contato:
 
-Email: darkx@hotmail.com.br
-
-LinkedIn: https://www.linkedin.com/in/dener-fonseca
-
-
-Usando essa estrutura acima como exemplo, crie um readme para um projeto que fiz para universidade Uninter
-
-Trata se de um projeto para matéria Programação Orientada a Objetos em que fiz um projeto em Java 
-
-Trata se de um cofrinho digital
-
-Ele permite ao usuário adicionar moedas com valores específicados, pode retirar um valor dessa moeda e se chegar a zero ela é retirada, pode verificar quais moedas estão no cofrinho com seus valores totais acumulados e também mostrar o total de dinheiro convertido em reais.
-
-Ela possui um menu que mostra essas quatro opções mais sair do programa além de menu dentro de adicionar para escolher moeda e depositar e dentro de retirar moeda para a escolher e sacar valor.
-
-Neste trabalho usei uso de pacotes Main, Cofrinho e Moedas e importações deles e coisas da biblioteca padrão java, criei classes main, cofrinho, moeda, real, dólar, euro, libra, yene e yuan.
-
-Usei o scanner para pedir entrada do usuário 
-
-Criei variáveis para armazenar informações 
-
-Criei listas para armazenar moedas
-
-Usei estruturas de rep
+📧 Email: darkx@hotmail.com.br
+🔗 LinkedIn: https://www.linkedin.com/in/dener-fonseca
