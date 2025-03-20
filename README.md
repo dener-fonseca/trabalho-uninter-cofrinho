@@ -97,7 +97,7 @@ Passos para execução
 
 
 
-git clone https://github.com/SEU_USUARIO/cofrinho-digital.git
+git clone: https://github.com/Dener-Fonseca/trabalho-uninter-cofrinho.git
 
 2. Acesse o diretório do projeto:
 
