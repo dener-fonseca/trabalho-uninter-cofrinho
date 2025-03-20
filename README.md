@@ -1,6 +1,6 @@
 Cofrinho Digital - Uninter
 
-Este é um projeto acadêmico desenvolvido para a disciplina de Programação Orientada a Objetos na Universidade Uninter. O projeto consiste em um cofrinho digital, que permite ao usuário realizar operações relacionadas à adição, remoção e consulta de moedas, além de converter o total armazenado para reais.
+Este é um projeto acadêmico desenvolvido para a disciplina de Programação Orientada a Objetos na Universidade Centro Universitário Internacional UNINTER. O projeto consiste em um cofrinho digital, que permite ao usuário realizar operações relacionadas à adição, remoção e consulta de moedas, além de converter o total armazenado para reais.
 
 🛠 Tecnologias e Conceitos Utilizados
 
@@ -35,10 +35,15 @@ Manipulação de Objetos: Adição e remoção dinâmica de moedas dentro do cof
 O Cofrinho Digital permite que o usuário gerencie moedas de diferentes tipos e valores, realizando as seguintes operações:
 
 ✅ Adicionar Moedas: O usuário pode escolher entre diferentes tipos de moedas e especificar o valor a ser adicionado.
+
 ✅ Remover Moedas: O usuário pode selecionar uma moeda específica e remover um valor dela. Se o valor chegar a zero, a moeda é excluída do cofrinho.
+
 ✅ Listar Moedas: Exibe todas as moedas armazenadas no cofrinho, junto com seus valores acumulados.
+
 ✅ Exibir Total Convertido: Mostra o valor total do cofrinho convertido para reais.
+
 ✅ Menu Interativo: O sistema possui um menu principal e submenus para facilitar a interação do usuário.
+
 ✅ Encerramento do Programa: Opção para sair do programa.
 
 
