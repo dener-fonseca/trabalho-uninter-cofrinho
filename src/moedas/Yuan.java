@@ -14,7 +14,7 @@ public class Yuan extends Moeda {
 
   //Método que imprime as informações da moeda Yuan e o seu valor total acumulado
   public void info() {
-    System.out.printf("Moeda Dolar: Valor total acumulado: ¥ %.2f%n", this.valor);
+    System.out.printf("Moeda Yuan: Valor total acumulado: ¥ %.2f%n", this.valor);
   }
 
   //Método para conversão do valor em Yuan para Real
