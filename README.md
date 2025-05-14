@@ -97,7 +97,7 @@ Passos para execução
 
 
 
-git clone: https://github.com/Dener-Fonseca/trabalho-uninter-cofrinho.git
+git clone: https://github.com/dener-fonseca/trabalho-uninter-cofrinho.git
 
 2. Acesse o diretório do projeto:
 
